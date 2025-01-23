@@ -1,0 +1,24 @@
+{
+  "name": "bankapi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bankapi.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Smuntz/bankapi.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Smuntz/bankapi/issues"
+  },
+  "homepage": "https://github.com/Smuntz/bankapi#readme",
+  "dependencies": {
+    "express": "^4.21.2",
+    "node-fetch": "^3.3.2"
+  }
+}
