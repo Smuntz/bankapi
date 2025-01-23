@@ -20,6 +20,5 @@
   "dependencies": {
     "express": "^4.21.2",
     "node-fetch": "^2.7.0",
-    "undici": "^7.3.0"
   }
 }
