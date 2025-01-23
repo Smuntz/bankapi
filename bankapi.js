@@ -2,7 +2,7 @@ const express = require("express");
 const fetch = require("node-fetch"); // Import node-fetch (v2 works with require)
 
 const app = express();
-const PORT = process.env.PORT || 3000; // Use the PORT environment variable for deployment
+const PORT = process.env.PORT || 10000; // Use the PORT environment variable for deployment
 
 // API URL
 const apiUrl = "https://ecas.bkhicd.com/api/customer/api/BankDetails/Malaysia";

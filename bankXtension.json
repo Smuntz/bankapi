@@ -1,0 +1,41 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "Bank Details",
+        "description": "Retreives bank details"
+    },
+    "host": "bankapi-tx70.onrender.com",
+    "basePath": "/",
+    "schemes": [
+        "https"
+    ],
+    "produces": [
+        "application/json"
+    ],
+    "paths": {
+        "/banks": {
+            "get": {
+                "summary": "Get Banks",
+                "description": "Get banks",
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK - Successful response with a list of bank names",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "bankNames": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
