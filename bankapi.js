@@ -1,8 +1,8 @@
 const express = require("express");
-const fetch = require("node-fetch");
+const fetch = require("node-fetch"); // Import node-fetch
 
 const app = express();
-const PORT = 10000;
+const PORT = process.env.PORT || 3000; // Use the PORT environment variable for deployment
 
 // API URL
 const apiUrl = "https://ecas.bkhicd.com/api/customer/api/BankDetails/Malaysia";
@@ -10,16 +10,13 @@ const apiUrl = "https://ecas.bkhicd.com/api/customer/api/BankDetails/Malaysia";
 // Endpoint to fetch and return the bank names
 app.get("/banks", async (req, res) => {
   try {
-    // Fetch data from the API
     const response = await fetch(apiUrl);
     if (!response.ok) {
       throw new Error("Failed to fetch data from the API");
     }
 
     const data = await response.json();
-
-    // Extract bank names and return as an object
-    const bankNames = data.result.map(bank => bank.bankName);
+    const bankNames = data.result.map((bank) => bank.bankName);
 
     res.json({ bankNames });
   } catch (error) {
@@ -28,7 +25,6 @@ app.get("/banks", async (req, res) => {
   }
 });
 
-// Start the server
 app.listen(PORT, () => {
-  console.log(`Server is running on ${PORT}`);
+  console.log(`Server is running on port ${PORT}`);
 });
