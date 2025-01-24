@@ -44,3 +44,7 @@ The api will returns:
         "UNITED OVERSEAS BANK (MALAYSIA) BERHAD"
     ]
 }
+
+# Note
+Example extension is hosted on Render.com and can take up to a minute the first time it is accessed.  Thsi API is for testing purposes only.
+please host the API on production infrustructure for more responsive use.
